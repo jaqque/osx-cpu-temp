@@ -3,7 +3,7 @@ CC     = cc
 CFLAGS = -O2 -Wall
 INC    = -framework IOKit
 PREFIX = /usr/local
-EXEC   = osx-cpu-temp
+EXEC   = sensors
 
 build : $(EXEC)
 
@@ -14,4 +14,4 @@ $(EXEC) : smc.c
 	$(CC) $(CFLAGS) $(INC) -o $@ $?
 
 install : $(EXEC)
-	install $(EXEC) $(PREFIX)/bin
+	install -s $(EXEC) $(PREFIX)/bin

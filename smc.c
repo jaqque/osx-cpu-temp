@@ -170,7 +170,8 @@ double SMCGetTemperature(char *key)
 int main(int argc, char *argv[])
 {
     SMCOpen();
-    printf("%0.1f°C\n", SMCGetTemperature(SMC_KEY_CPU_TEMP));
+    printf("SMC CPU A DIODE\n");
+    printf("Core: +%0.1f°C\n", SMCGetTemperature(SMC_KEY_CPU_TEMP));
     SMCClose();
 
     return 0;
